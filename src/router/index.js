@@ -28,6 +28,16 @@ const ProjectModuleList = r => require.ensure([], () => r(require('@/views/Proje
 /* ProjectModuleAdd添加 */
 const ProjectModuleAdd = r => require.ensure([], () => r(require('@/views/ProjectModule/add')), 'ProjectModuleAdd')
 
+/* ProjectPlusModuleUpdate更新 */
+const ProjectPlusModuleView = r => require.ensure([], () => r(require('@/views/ProjectPlusModule/view')), 'ProjectPlusModuleView')
+/* ProjectPlusModuleEdit编辑 */
+const ProjectPlusModuleEdit = r => require.ensure([], () => r(require('@/views/ProjectPlusModule/edit')), 'ProjectPlusModuleEdit')
+/* ProjectPlusModuleList列表 */
+const ProjectPlusModuleList = r => require.ensure([], () => r(require('@/views/ProjectPlusModule/list')), 'ProjectPlusModuleList')
+/* ProjectPlusModuleAdd添加 */
+const ProjectPlusModuleAdd = r => require.ensure([], () => r(require('@/views/ProjectPlusModule/add')), 'ProjectPlusModuleAdd')
+
+
 export const constantRouterMap = [
     {
         path: '',
@@ -113,6 +123,59 @@ export const constantRouterMap = [
                 name: 'ProjectModuleAdd',
                 meta: {
                     title: 'ProjectModuleAdd添加'
+                },
+                hidden: true
+            }
+
+        ]
+    },
+    {
+        path: '',
+        component: Layout,
+        redirect: '/homepage',
+        name: 'HomePage',
+        meta: {
+            title: '业务管理'
+        },
+        noDropdown: true,
+        children: [
+            {
+                path: 'ProjectPlusModulelist',
+                component: ProjectPlusModuleList,
+                name: 'ProjectPlusModuleList',
+                meta: {
+                    title: 'ProjectPlusModuleList列表'
+                },
+                hidden: false
+            }
+            ,
+            {
+                path: 'ProjectPlusModuleview',
+                component: ProjectPlusModuleView,
+                name: 'ProjectPlusModuleView',
+                meta: {
+                    title: 'ProjectPlusModuleUpdate更新'
+                },
+                hidden: true
+            }
+            ,
+            {
+                path: 'ProjectPlusModuleedit',
+                component: ProjectPlusModuleEdit,
+                name: 'ProjectPlusModuleEdit',
+                meta: {
+                    title: 'ProjectPlusModuleEdit编辑'
+                },
+                hidden: true
+            }
+            ,
+
+            {
+                path: 'ProjectPlusModuleadd',
+                component: ProjectPlusModuleAdd,
+                name: 'ProjectPlusModuleAdd',
+                meta: {
+                    title: 'ProjectPlusModuleAdd添加'
                 },
                 hidden: true
             }

@@ -48,11 +48,33 @@ export default {
     /* 执行shell命令 */
     "runDockerShell": BASE_URL + '/DockerShellController/runDockerShell',
     "getDataFromContainer": BASE_URL + '/DockerShellController/getDataFromContainer',
-    "getOuterPortainerUrl": BASE_URL + '/DockerShellController/getOuterPortainerUrl',
-    "getInnerPortainerUrl": BASE_URL + '/DockerShellController/getInnerPortainerUrl',
+    "getOuterPortainerUrl": BASE_URL + '/StartConfig/getOuterPortainerUrl',
+    "getInnerPortainerUrl": BASE_URL + '/StartConfig/getInnerPortainerUrl',
 
     /*构建docker镜像*/
-    "buildToDocker": BASE_URL + '/ASPToDockerController/buildToDocker'
+    "buildToDocker": BASE_URL + '/ASPToDockerController/buildToDocker',
+    /*下载zip*/
+    "downloadZip": BASE_URL + '/ASPToDockerController/downloadZip',
+    /*下载introduce*/
+    "downIntroduce": BASE_URL + '/ASPToDockerController/downIntroduce',
+
+    /* ProjectPlus */
+    /* 根据主键更新ProjectPlus */
+    "updateProjectPlusByPrimaryKey": BASE_URL + '/ProjectPlusController/updateByPrimaryKey',
+    /* 单条插入ProjectPlus */
+    "insertProjectPlus": BASE_URL + '/ProjectPlusController/insert',
+    /* 根据主键删除ProjectPlus */
+    "deleteProjectPlusByPrimaryKey": BASE_URL + '/ProjectPlusController/deleteByPrimaryKey',
+    /* 分页查询ProjectPlus */
+    "queryBasePageHelperProjectPlus": BASE_URL + '/ProjectPlusController/queryBasePageHelper',
+    /* 根据主键查询ProjectPlus */
+    "queryProjectPlusByPrimaryKey": BASE_URL + '/ProjectPlusController/queryByPrimaryKey',
+    /* 多条件查询ProjectPlus */
+    "queryBaseProjectPlus": BASE_URL + '/ProjectPlusController/queryBase',
+    /* 批量插入ProjectPlus */
+    "insertsProjectPlus": BASE_URL + '/ProjectPlusController/inserts',
+    /* 多条件更新ProjectPlus */
+    "updateBaseProjectPlus": BASE_URL + '/ProjectPlusController/updateBase'
 
 
 }
