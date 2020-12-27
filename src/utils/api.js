@@ -57,6 +57,8 @@ export default {
     "downloadZip": BASE_URL + '/ASPToDockerController/downloadZip',
     /*下载introduce*/
     "downIntroduce": BASE_URL + '/ASPToDockerController/downIntroduce',
+    /*预览指定文件的文件*/
+    "preByFileNameUrl": BASE_URL + '/ASPToDockerController/preByFileName',
 
     /* ProjectPlus */
     /* 根据主键更新ProjectPlus */

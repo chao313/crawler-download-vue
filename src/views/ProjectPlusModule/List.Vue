@@ -148,12 +148,13 @@
                     <tr>
                         <th>id</th>
                         <!--显示的字段 - 英文-->
-                        <th>id</th>
-                        <th>criteriaid</th>
                         <th>projectName</th>
                         <th>操作</th>
-                        <th>镜像操作</th>
-                        <th>容器操作</th>
+                        <th>DEV镜像操作</th>
+                        <th>DEV容器操作</th>
+                        <th>PRO镜像操作</th>
+                        <th>PRO容器操作</th>
+                        <th>容器内网/外网</th>
                         <th>portainer内网</th>
                         <th>portainer外网</th>
                         <th>projectUpdateTime</th>
@@ -181,12 +182,13 @@
                     <tr>
                         <th>序号</th>
                         <!--显示的字段 - 中文-->
-                        <th></th>
-                        <th>唯一id</th>
                         <th>项目-名称</th>
                         <th>操作</th>
-                        <th>镜像操作</th>
-                        <th>容器操作</th>
+                        <th>DEV镜像操作</th>
+                        <th>DEV容器操作</th>
+                        <th>PRO镜像操作</th>
+                        <th>PRO容器操作</th>
+                        <th>容器内网/外网</th>
                         <th>portainer内网</th>
                         <th>portainer外网</th>
                         <th>项目-更新时间</th>
@@ -215,10 +217,10 @@
                     <tr v-for="(info,index) in dataList">
                         <td>{{index+1}}</td>
                         <!--显示的字段 - 具体数据-->
-                        <td>{{info.id}}</td>
-                        <td>{{info.criteriaid}}</td>
                         <td>{{info.projectName}}</td>
                         <td>
+                            <span class="el-icon-view" @click="pen(info.criteriaid)">id
+                            </span>
                             <span :class="info.projectPanAddress? 'default' : 'red' "
                                   @click="pen(info.projectPanAddress)">网盘
                             </span>
@@ -227,7 +229,8 @@
                                 <!--介绍-->
                             </span>
                             <span :class="info.projectImgs? 'default el-icon-picture' : 'red el-icon-picture' "
-                                  @click="pen(info.projectImgs)">
+                                  @click="showImgs(info.projectImgs)">
+                                <!--图片-->
                             </span>
                             <a :href="info.projectSourceUrl" target="_blank">
                                 <span :class="info.projectSourceUrl? 'default el-icon-view' : 'red el-icon-view' ">源URL</span>
@@ -238,86 +241,110 @@
                                 <span :class="info.addressProjectFront? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">Front</span>
                             </a>
                             <a :href="info.addressProjectBackground" target="_blank">
-                                <span :class="info.addressProjectBackground? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">Background</span>
+                                <span :class="info.addressProjectBackground? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">Bg</span>
                             </a>
                             <span class="el-icon-download"
                                   @click="downloadZip(info.criteriaid)">zip
                             </span>
                             <span class="el-icon-download"
-                                  @click="downIntroduce(info.criteriaid)">introduce
+                                  @click="downIntroduce(info.criteriaid)">介绍
                             </span>
                             <span :class="info.projectShowWebsite? 'default el-icon-download' : 'red el-icon-download' "
                                   @click="downIntroduce(info.criteriaid)">sql
                             </span>
-                            <span class="el-icon-edit-outline" @click="routerToEdit(info.id)"><!--编辑--></span>
-                            <span @click="deleteByPrimaryKey(info.id)">删除</span>
-                            <a :href="info.projectOfficialWebsite" target="_blank">
-                                <span :class="info.projectOfficialWebsite? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">官网</span>
-                            </a>
-                            <a :href="info.projectShowWebsite" target="_blank">
-                                <span :class="info.projectShowWebsite? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">官网演示</span>
-                            </a>
                         </td>
                         <td style="text-align:center !important">
-                            <template v-if="info.dockerStatus">
-                            <span v-if="info.dockerStatus=='image_no_exist' || info.dockerImageName == null"
+                            <span v-if="info.devDockerStatusImagesIsExist=='false'"
                                   class="el-icon-circle-plus-outline"
                                   @click="buildToDocker(info.criteriaid)">
                                <!--只要镜像不存在才能构建镜像构建-->
                             </span>
-                                <span v-else class="el-icon-circle-close"
-                                      @click="runDockerShell(info.dockerImageShellRemove)">
+                            <span v-else class="el-icon-circle-close"
+                                  @click="runDockerShell(info.devDockerImageShellRemove)">
                                 <!--镜像移除-->
                             </span>
-                            </template>
                         </td>
                         <td>
-                            <template v-if="info.dockerStatus">
-                                <span v-if="info.dockerStatus=='image_no_exist' || info.dockerStatus=='image_exist'"
-                                      class="el-icon-circle-plus-outline"
-                                      @click="runDockerShell(info.dockerContainerShellCreate)">
+                            <span v-if="info.devDockerStatusContainerIsExist=='false'"
+                                  class="el-icon-circle-plus-outline"
+                                  @click="runDockerShell(info.devDockerContainerShellCreate)">
+                            </span>
+                            <span v-else
+                                  class="el-icon-circle-close"
+                                  @click="runDockerShell(info.devDockerContainerShellRemove)">
                                 </span>
-                                <span v-else-if="info.dockerStatus=='container_stopped' || info.dockerStatus=='container_running'"
-                                      class="el-icon-circle-close"
-                                      @click="runDockerShell(info.dockerContainerShellRemove)">
-                                </span>
-                                <span v-if="info.dockerStatus=='container_running'" class="el-icon-video-pause"
-                                      @click="runDockerShell(info.dockerContainerShellStop)">
+                            <template v-if="info.devDockerStatusContainerIsExist=='true'">
+                            <span v-if="info.devDockerStatusContainerIsRunning=='false'"
+                                  class="el-icon-video-play"
+                                  @click="runDockerShell(info.devDockerContainerShellRun)">
                                 </span>
                                 <span v-else
-                                      :class="info.dockerStatus=='container_stopped'? 'default el-icon-video-play' : 'red el-icon-video-play' "
-                                      @click="runDockerShell(info.dockerContainerShellRun)">
+                                      class="el-icon-video-pause"
+                                      @click="runDockerShell(info.devDockerContainerShellStop)">
                                 </span>
-                                <a :href="info.addressContainerInner" target="_blank">
-                                    <span :class="info.dockerStatus=='container_running'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">容器内网</span>
-                                </a>
-                                <a :href="info.addressContainerOuter" target="_blank">
-                                    <span :class="info.dockerStatus=='container_running'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">容器外网</span>
-                                </a>
+                            </template>
+                        </td>
+                        <td style="text-align:center !important">
+                            <span v-if="info.proDockerStatusImagesIsExist=='false'"
+                                  class="el-icon-circle-plus-outline"
+                                  @click="buildToDocker(info.criteriaid)">
+                               <!--只要镜像不存在才能构建镜像构建-->
+                            </span>
+                            <span v-else class="el-icon-circle-close"
+                                  @click="runDockerShell(info.proDockerImageShellRemove)">
+                                <!--镜像移除-->
+                            </span>
+                        </td>
+                        <td>
+                            <span v-if="info.proDockerStatusContainerIsExist=='false'"
+                                  class="el-icon-circle-plus-outline"
+                                  @click="runDockerShell(info.proDockerContainerShellCreate)">
+                            </span>
+                            <span v-else
+                                  class="el-icon-circle-close"
+                                  @click="runDockerShell(info.proDockerContainerShellRemove)">
+                                </span>
+                            <template v-if="info.proDockerStatusContainerIsExist=='true'">
+                            <span v-if="info.proDockerStatusContainerIsRunning=='false'"
+                                  class="el-icon-video-play"
+                                  @click="runDockerShell(info.proDockerContainerShellRun)">
+                                </span>
+                                <span v-else
+                                      class="el-icon-video-pause"
+                                      @click="runDockerShell(info.proDockerContainerShellStop)">
+                                </span>
                             </template>
                         </td>
                         <td>
-                            <template v-if="info.dockerStatus">
-                                <span @click="openInnerPortainerUrl(info.dockerContainerId,'logs')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-document' : 'red el-icon-document' "></span>
-                                <span @click="openInnerPortainerUrl(info.dockerContainerId,'inspect')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-info' : 'red el-icon-info' "></span>
-                                <span @click="openInnerPortainerUrl(info.dockerContainerId,'stats')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
-                                <span @click="openInnerPortainerUrl(info.dockerContainerId,'exec')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                            <a :href="info.addressContainerInner" target="_blank">
+                                <span :class="info.devDockerStatusContainerIsRunning=='true' || info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">容器内网</span>
+                            </a>
+                            <a :href="info.addressContainerOuter" target="_blank">
+                                <span :class="info.devDockerStatusContainerIsRunning=='true' || info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">容器外网</span>
+                            </a>
+                        </td>
+                        <td>
+                            <template v-if="info.devDockerContainerId">
+                                <span @click="openInnerPortainerUrl(info.devDockerContainerId,'logs')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                <span @click="openInnerPortainerUrl(info.devDockerContainerId,'inspect')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                <span @click="openInnerPortainerUrl(info.devDockerContainerId,'stats')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                <span @click="openInnerPortainerUrl(info.devDockerContainerId,'exec')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
                             </template>
                         </td>
                         <td>
-                            <template v-if="info.dockerStatus">
-                                <span @click="openOuterPortainerUrl(info.dockerContainerId,'logs')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-document' : 'red el-icon-document' "></span>
-                                <span @click="openOuterPortainerUrl(info.dockerContainerId,'inspect')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-info' : 'red el-icon-info' "></span>
-                                <span @click="openOuterPortainerUrl(info.dockerContainerId,'stats')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
-                                <span @click="openOuterPortainerUrl(info.dockerContainerId,'exec')"
-                                      :class="info.dockerStatus=='container_running'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                            <template v-if="info.devDockerContainerId">
+                                <span @click="openOuterPortainerUrl(info.devDockerContainerId,'logs')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                <span @click="openOuterPortainerUrl(info.devDockerContainerId,'inspect')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                <span @click="openOuterPortainerUrl(info.devDockerContainerId,'stats')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                <span @click="openOuterPortainerUrl(info.devDockerContainerId,'exec')"
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
                             </template>
                         </td>
                         <td>{{info.projectUpdateTime}}</td>
@@ -373,6 +400,20 @@
     <el-button @click="dialog.dialogVisible = false">取 消</el-button>
     <el-button type="primary" @click="handleClose">确 定</el-button></span>
             </el-dialog>
+            <!--下载地址-->
+            <el-dialog
+                    title=""
+                    :visible.sync="imgs.dialog.dialogVisible"
+                    fullscreen="true"
+                    show-close="false"
+                    style="text-align: center"
+                    :before-close="handleClose">
+                <template v-for="url in imgs.dialog.urls">
+                    <img :src="imgs.api+'?fileName='+url" width="30%" style="float: left; margin: 5px"/>
+                </template>
+                <span slot="footer" class="dialog-footer">
+    <el-button type="primary" @click="imgs.dialog.dialogVisible = false">确 定</el-button></span>
+            </el-dialog>
         </div>
     </div>
 </template>
@@ -412,7 +453,6 @@
                     projectPrice: '',
                     projectPackageType: '',
                     projectPanAddress: '',
-                    projectRealFileName: '',
                     projectHtmlBody: '',
                     projectSourceUrl: '',
                     projectLanguage: '',
@@ -430,21 +470,37 @@
                     projectStatus: '',
                     projectMark: '',
                     projectCanRunning: '',
-                    dockerImageName: '',
-                    dockerImageShellRemove: '',
-                    dockerStatus: '',
-                    dockerContainerId: '',
-                    dockerContainerName: '',
-                    dockerContainerPort: '',
-                    dockerContainerShellCreate: '',
-                    dockerContainerShellRun: '',
-                    dockerContainerShellStop: '',
-                    dockerContainerShellRemove: '',
+                    projectSql: '',
+                    projectPort: '',
                     addressContainerOuter: '',
                     addressContainerInner: '',
                     addressProjectFront: '',
                     addressProjectBackground: '',
                     addressProjectBackgroundAccountPasswd: '',
+                    devProjectRealFileName: '',
+                    devDockerImageName: '',
+                    devDockerImageShellRemove: '',
+                    devDockerContainerId: '',
+                    devDockerContainerName: '',
+                    devDockerContainerShellCreate: '',
+                    devDockerContainerShellRun: '',
+                    devDockerContainerShellStop: '',
+                    devDockerContainerShellRemove: '',
+                    devDockerStatusImagesIsExist: '',
+                    devDockerStatusContainerIsExist: '',
+                    devDockerStatusContainerIsRunning: '',
+                    proProjectRealFileName: '',
+                    proDockerImageName: '',
+                    proDockerImageShellRemove: '',
+                    proDockerContainerId: '',
+                    proDockerContainerName: '',
+                    proDockerContainerShellCreate: '',
+                    proDockerContainerShellRun: '',
+                    proDockerContainerShellStop: '',
+                    proDockerContainerShellRemove: '',
+                    proDockerStatusImagesIsExist: '',
+                    proDockerStatusContainerIsExist: '',
+                    proDockerStatusContainerIsRunning: '',
                     updateTime: '',
                     pageNum: 1,
                     pageSize: 10
@@ -472,10 +528,14 @@
                 },
                 dialog: {
                     dialogVisible: false,
-                    value: '',
-                    index: '',
-                    type: '',
-                    id: '',
+                    value: ''
+                },
+                imgs: {
+                    dialog: {
+                        dialogVisible: false,
+                        urls: []
+                    },
+                    api: ''
                 },
                 host: {
                     portainer: {
@@ -765,24 +825,31 @@
                 self.searchEvent();
             },
             pen(value) {
-                this.$alert(value, '预览', {
+                this.$alert('<pre>' + value + '</pre>', '预览', {
                     dangerouslyUseHTMLString: true
                 });
             },
-            show(index, type, id, value) {
+            // pen(value) {
+            //     this.$alert(value, '预览', {
+            //         dangerouslyUseHTMLString: true
+            //     });
+            // },
+            show(value) {
                 let self = this;
                 //清空
                 self.dialog.value = '';
-                self.dialog.index = '';
-                self.dialog.type = '';
-                self.dialog.id = '';
-                //
+                //注入内容
                 self.dialog.dialogVisible = true;
-                self.dialog.value = JSON.stringify(value, null, 2);
-                self.dialog.index = index;
-                self.dialog.type = type;
-                self.dialog.id = id;
-
+                self.dialog.value = value;
+            },
+            showImgs(imgs) {
+                let self = this;
+                self.imgs.api = this.api.preByFileNameUrl;
+                //清空
+                self.imgs.dialog.urls = [];
+                //注入内容
+                self.imgs.dialog.dialogVisible = true;
+                self.imgs.dialog.urls = imgs.split(",");
             },
 
             getInnerPortainerUrl() {
@@ -1003,5 +1070,14 @@
         white-space: nowrap;
         text-align: left !important;
         padding-left: 10px;
+    }
+
+    .t_area {
+        width: 300px;
+        overflow-y: visible
+    }
+
+    .el-message-box {
+        width: 600px;
     }
 </style>
