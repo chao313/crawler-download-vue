@@ -152,6 +152,7 @@
                         <th>操作</th>
                         <th>DEV镜像操作</th>
                         <th>DEV容器操作</th>
+                        <th>DevToPro</th>
                         <th>PRO镜像操作</th>
                         <th>PRO容器操作</th>
                         <th>容器内网/外网</th>
@@ -186,6 +187,7 @@
                         <th>操作</th>
                         <th>DEV镜像操作</th>
                         <th>DEV容器操作</th>
+                        <th>DevToPro</th>
                         <th>PRO镜像操作</th>
                         <th>PRO容器操作</th>
                         <th>容器内网/外网</th>
@@ -284,10 +286,16 @@
                                 </span>
                             </template>
                         </td>
+                        <td>
+                               <span class="el-icon-circle-plus-outline"
+                                     @click="generateImageProZip(info.criteriaid)">devToPro
+                                   <!--devToPro-->
+                            </span>
+                        </td>
                         <td style="text-align:center !important">
                             <span v-if="info.proDockerStatusImagesIsExist=='false'"
                                   class="el-icon-circle-plus-outline"
-                                  @click="buildToDocker(info.criteriaid)">
+                                  @click="buildToDockerPro(info.criteriaid)">
                                <!--只要镜像不存在才能构建镜像构建-->
                             </span>
                             <span v-else class="el-icon-circle-close"
@@ -954,6 +962,91 @@
 
                 })
             },
+            generateImageProZip(criteriaid) {
+                let self = this;
+                this.$confirm('是否执行构建？', criteriaid, {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    center: true
+                }).then(() => {
+                    self.$http.get(self.api.generateImageProZip
+                        , {
+                            params: {
+                                criteriaid: criteriaid
+                            }
+                        },
+                        function (response) {
+                            if (response.code == 0) {
+                                self.$message({
+                                    type: 'success',
+                                    message: '执行成功:' + response.content,
+                                    duration: 2000
+                                });
+                                self.queryBase();
+                            } else {
+                                self.$message({
+                                    type: 'error',
+                                    message: response.msg,
+                                    duration: 2000
+                                });
+                            }
+                        },
+                        function (response) {
+                            console.log(response);
+                            //失败回调
+                            self.$message({
+                                type: 'error',
+                                message: "请求异常",
+                                duration: 2000
+                            });
+                        }
+                    )
+
+                })
+            },
+            buildToDockerPro(criteriaid) {
+                let self = this;
+                this.$confirm('是否创建容器？', criteriaid, {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    center: true
+                }).then(() => {
+                    self.$http.get(self.api.buildToDockerPro
+                        , {
+                            params: {
+                                criteriaid: criteriaid
+                            }
+                        },
+                        function (response) {
+                            if (response.code == 0) {
+                                self.$message({
+                                    type: 'success',
+                                    message: '执行成功:' + response.content,
+                                    duration: 2000
+                                });
+                                self.queryBase();
+                            } else {
+                                self.$message({
+                                    type: 'error',
+                                    message: response.msg,
+                                    duration: 2000
+                                });
+                            }
+                        },
+                        function (response) {
+                            console.log(response);
+                            //失败回调
+                            self.$message({
+                                type: 'error',
+                                message: "请求异常",
+                                duration: 2000
+                            });
+                        }
+                    )
+
+                })
+            }
+            ,
             runDockerShell(cmd) {
                 let self = this;
                 this.$confirm('是否执行该条命令？', cmd, {
@@ -995,7 +1088,8 @@
                     )
 
                 })
-            },
+            }
+            ,
             downloadZip(criteriaid) {
                 this.$confirm('是否下载zip？', criteriaid, {
                     confirmButtonText: '确定',
@@ -1006,7 +1100,8 @@
                     let url = self.api.downloadZip + "?criteriaid=" + criteriaid;
                     window.open(url, '_blank');
                 })
-            },
+            }
+            ,
             downIntroduce(criteriaid) {
                 this.$confirm('是否下载introduce？', criteriaid, {
                     confirmButtonText: '确定',
@@ -1017,7 +1112,8 @@
                     let url = self.api.downIntroduce + "?criteriaid=" + criteriaid;
                     window.open(url, '_blank');
                 })
-            },
+            }
+            ,
 
         }
 

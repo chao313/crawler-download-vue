@@ -59,6 +59,10 @@ export default {
     "downIntroduce": BASE_URL + '/ASPToDockerController/downIntroduce',
     /*预览指定文件的文件*/
     "preByFileNameUrl": BASE_URL + '/ASPToDockerController/preByFileName',
+    /*生成DockerProZip*/
+    "generateImageProZip": BASE_URL + '/ASPToDockerController/generateImageProZip',
+    /*生成DockerProZip*/
+    "buildToDockerPro": BASE_URL + '/ASPToDockerController/buildToDockerPro',
 
     /* ProjectPlus */
     /* 根据主键更新ProjectPlus */
