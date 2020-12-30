@@ -287,7 +287,8 @@
                             </template>
                         </td>
                         <td>
-                               <span class="el-icon-circle-plus-outline"
+                               <span v-if="info.devDockerStatusContainerIsRunning=='true'"
+                                     class="el-icon-circle-plus-outline"
                                      @click="generateImageProZip(info.criteriaid)">devToPro
                                    <!--devToPro-->
                             </span>
@@ -342,6 +343,16 @@
                                 <span @click="openInnerPortainerUrl(info.devDockerContainerId,'exec')"
                                       :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
                             </template>
+                            <template v-if="info.proDockerContainerId">
+                                <span @click="openInnerPortainerUrl(info.proDockerContainerId,'logs')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                <span @click="openInnerPortainerUrl(info.proDockerContainerId,'inspect')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                <span @click="openInnerPortainerUrl(info.proDockerContainerId,'stats')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                <span @click="openInnerPortainerUrl(info.proDockerContainerId,'exec')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                            </template>
                         </td>
                         <td>
                             <template v-if="info.devDockerContainerId">
@@ -353,6 +364,16 @@
                                       :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
                                 <span @click="openOuterPortainerUrl(info.devDockerContainerId,'exec')"
                                       :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                            </template>
+                            <template v-if="info.proDockerContainerId">
+                                <span @click="openOuterPortainerUrl(info.proDockerContainerId,'logs')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                <span @click="openOuterPortainerUrl(info.proDockerContainerId,'inspect')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                <span @click="openOuterPortainerUrl(info.proDockerContainerId,'stats')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                <span @click="openOuterPortainerUrl(info.proDockerContainerId,'exec')"
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
                             </template>
                         </td>
                         <td>{{info.projectUpdateTime}}</td>
