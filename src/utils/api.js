@@ -47,6 +47,8 @@ export default {
 
     /* 执行shell命令 */
     "runDockerShell": BASE_URL + '/DockerShellController/runDockerShell',
+    /* 执行多个命令 */
+    "runDockerShells": BASE_URL + '/DockerShellController/runDockerShells',
     "getDataFromContainer": BASE_URL + '/DockerShellController/getDataFromContainer',
     "getOuterPortainerUrl": BASE_URL + '/StartConfig/getOuterPortainerUrl',
     "getInnerPortainerUrl": BASE_URL + '/StartConfig/getInnerPortainerUrl',

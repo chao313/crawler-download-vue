@@ -11,134 +11,30 @@
                 <el-form-item label="projectName">
                     <el-input v-model="search.projectName" placeholder="请输入"></el-input>
                 </el-form-item>
-                <el-form-item label="projectUpdateTime">
-                    <el-input v-model="search.projectUpdateTime" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectType">
-                    <el-input v-model="search.projectType" placeholder="请输入"></el-input>
-                </el-form-item>
                 <el-form-item label="projectPrice">
                     <el-input v-model="search.projectPrice" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectPackageType">
-                    <el-input v-model="search.projectPackageType" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectPanAddress">
-                    <el-input v-model="search.projectPanAddress" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectRealFileName">
-                    <el-input v-model="search.projectRealFileName" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectHtmlBody">
-                    <el-input v-model="search.projectHtmlBody" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectSourceUrl">
-                    <el-input v-model="search.projectSourceUrl" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectLanguage">
-                    <el-input v-model="search.projectLanguage" placeholder="请输入"></el-input>
                 </el-form-item>
                 <el-form-item label="projectSize2">
                     <el-input v-model="search.projectSize2" placeholder="请输入"></el-input>
                 </el-form-item>
-                <el-form-item label="projectSizeNum">
-                    <el-input v-model="search.projectSizeNum" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectSizeType">
-                    <el-input v-model="search.projectSizeType" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectImgs">
-                    <el-input v-model="search.projectImgs" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectImgsDefault">
-                    <el-input v-model="search.projectImgsDefault" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectRuntime">
-                    <el-input v-model="search.projectRuntime" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectOfficialWebsite">
-                    <el-input v-model="search.projectOfficialWebsite" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectShowWebsite">
-                    <el-input v-model="search.projectShowWebsite" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectDownloadUrls">
-                    <el-input v-model="search.projectDownloadUrls" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectDownloadSum">
-                    <el-input v-model="search.projectDownloadSum" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectIntroduction">
-                    <el-input v-model="search.projectIntroduction" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectStatus">
-                    <el-input v-model="search.projectStatus" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectMark">
-                    <el-input v-model="search.projectMark" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="projectCanRunning">
-                    <el-input v-model="search.projectCanRunning" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerImageName">
-                    <el-input v-model="search.dockerImageName" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerImageShellRemove">
-                    <el-input v-model="search.dockerImageShellRemove" placeholder="请输入"></el-input>
-                </el-form-item>
                 <el-form-item label="dockerStatus">
-                    <el-input v-model="search.dockerStatus" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerContainerId">
-                    <el-input v-model="search.dockerContainerId" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerContainerName">
-                    <el-input v-model="search.dockerContainerName" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerContainerPort">
-                    <el-input v-model="search.dockerContainerPort" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerContainerShellCreate">
-                    <el-input v-model="search.dockerContainerShellCreate" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerContainerShellRun">
-                    <el-input v-model="search.dockerContainerShellRun" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerContainerShellStop">
-                    <el-input v-model="search.dockerContainerShellStop" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="dockerContainerShellRemove">
-                    <el-input v-model="search.dockerContainerShellRemove" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="addressContainerOuter">
-                    <el-input v-model="search.addressContainerOuter" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="addressContainerInner">
-                    <el-input v-model="search.addressContainerInner" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="addressProjectFront">
-                    <el-input v-model="search.addressProjectFront" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="addressProjectBackground">
-                    <el-input v-model="search.addressProjectBackground" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="addressProjectBackgroundAccountPasswd">
-                    <el-input v-model="search.addressProjectBackgroundAccountPasswd" placeholder="请输入"></el-input>
-                </el-form-item>
-                <el-form-item label="updateTime">
-                    <el-input v-model="search.updateTime" placeholder="请输入"></el-input>
+                    <el-select v-model="search.projectStatus" placeholder="请输入">
+                        <el-option v-for="item in status" :key="item"
+                                   :value="item">
+                        </el-option>
+                    </el-select>
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" class="el-button-search" @click="searchEvent()">查询</el-button>
                 </el-form-item>
-                <el-form-item>
-                    <el-button type="primary" class="el-button-search" @click="searchRest()">重置
-                    </el-button>
-                </el-form-item>
-                <el-form-item>
-                    <el-button type="primary" class="el-button-search" @click="routerToAdd()">添加
-                    </el-button>
-                </el-form-item>
+                <!--<el-form-item>-->
+                <!--<el-button type="primary" class="el-button-search" @click="searchRest()">重置-->
+                <!--</el-button>-->
+                <!--</el-form-item>-->
+                <!--<el-form-item>-->
+                <!--<el-button type="primary" class="el-button-search" @click="routerToAdd()">添加-->
+                <!--</el-button>-->
+                <!--</el-form-item>-->
             </el-form>
         </div>
         <div class="app-list">
@@ -150,32 +46,30 @@
                         <!--显示的字段 - 英文-->
                         <th>projectName</th>
                         <th>操作</th>
-                        <th>DEV镜像操作</th>
-                        <th>DEV容器操作</th>
+                        <th>镜像操作</th>
+                        <th>容器操作</th>
                         <th>DevToPro</th>
-                        <th>PRO镜像操作</th>
-                        <th>PRO容器操作</th>
                         <th>容器内网/外网</th>
                         <th>portainer内网</th>
                         <th>portainer外网</th>
-                        <th>projectUpdateTime</th>
-                        <th>projectType</th>
+                        <!--<th>projectUpdateTime</th>-->
+                        <!--<th>projectType</th>-->
                         <th>projectPrice</th>
-                        <th>projectPackageType</th>
-                        <th>projectRealFileName</th>
-                        <th>projectLanguage</th>
+                        <!--<th>projectPackageType</th>-->
+                        <!--<th>projectRealFileName</th>-->
+                        <!--<th>projectLanguage</th>-->
                         <th>projectSize2</th>
-                        <th>projectSizeNum</th>
-                        <th>projectSizeType</th>
-                        <th>projectRuntime</th>
-                        <th>projectDownloadSum</th>
+                        <!--<th>projectSizeNum</th>-->
+                        <!--<th>projectSizeType</th>-->
+                        <!--<th>projectRuntime</th>-->
+                        <!--<th>projectDownloadSum</th>-->
                         <th>projectStatus</th>
                         <th>projectMark</th>
-                        <th>projectCanRunning</th>
-                        <th>dockerImageName</th>
-                        <th>dockerStatus</th>
-                        <th>dockerContainerName</th>
-                        <th>dockerContainerPort</th>
+                        <!--<th>projectCanRunning</th>-->
+                        <!--<th>dockerImageName</th>-->
+                        <!--<th>dockerStatus</th>-->
+                        <!--<th>dockerContainerName</th>-->
+                        <!--<th>dockerContainerPort</th>-->
                         <th>addressProjectBackgroundAccountPasswd</th>
                         <th>updateTime</th>
                     </tr>
@@ -185,32 +79,30 @@
                         <!--显示的字段 - 中文-->
                         <th>项目-名称</th>
                         <th>操作</th>
-                        <th>DEV镜像操作</th>
-                        <th>DEV容器操作</th>
+                        <th>镜像操作</th>
+                        <th>容器操作</th>
                         <th>DevToPro</th>
-                        <th>PRO镜像操作</th>
-                        <th>PRO容器操作</th>
                         <th>容器内网/外网</th>
                         <th>portainer内网</th>
                         <th>portainer外网</th>
-                        <th>项目-更新时间</th>
-                        <th>项目-类型(VIP/COMMON)</th>
+                        <!--<th>项目-更新时间</th>-->
+                        <!--<th>项目-类型(VIP/COMMON)</th>-->
                         <th>项目-价格</th>
-                        <th>项目-下载包类型(流/text)</th>
-                        <th>项目-真实文件名称</th>
-                        <th>项目-开发语言</th>
+                        <!--<th>项目-下载包类型(流/text)</th>-->
+                        <!--<th>项目-真实文件名称</th>-->
+                        <!--<th>项目-开发语言</th>-->
                         <th>项目-大小</th>
-                        <th>项目-大小数字</th>
-                        <th>项目-大小type(k,M,G)</th>
-                        <th>项目-运行环境</th>
-                        <th>项目-下载次数</th>
+                        <!--<th>项目-大小数字</th>-->
+                        <!--<th>项目-大小type(k,M,G)</th>-->
+                        <!--<th>项目-运行环境</th>-->
+                        <!--<th>项目-下载次数</th>-->
                         <th>项目-状态,可用/废弃/暂定</th>
                         <th>项目-备注</th>
-                        <th>项目-是否正常运行</th>
-                        <th>docker-镜像-名称</th>
-                        <th>docker-状态,创建.运行中,停止,容器移除,镜像移除</th>
-                        <th>docker-容器-名称</th>
-                        <th>docker-端口号</th>
+                        <!--<th>项目-是否正常运行</th>-->
+                        <!--<th>docker-镜像-名称</th>-->
+                        <!--<th>docker-状态,创建.运行中,停止,容器移除,镜像移除</th>-->
+                        <!--<th>docker-容器-名称</th>-->
+                        <!--<th>docker-端口号</th>-->
                         <th>地址-项目后台-账号密码</th>
                         <th>更新时间</th>
                     </tr>
@@ -223,9 +115,9 @@
                         <td>
                             <span class="el-icon-view" @click="pen(info.criteriaid)">id
                             </span>
-                            <span :class="info.projectPanAddress? 'default' : 'red' "
-                                  @click="pen(info.projectPanAddress)">网盘
-                            </span>
+                            <!--<span :class="info.projectPanAddress? 'default' : 'red' "-->
+                            <!--@click="pen(info.projectPanAddress)">网盘-->
+                            <!--</span>-->
                             <span :class="info.projectIntroduction? 'default el-icon-s-comment' : 'red el-icon-s-comment' "
                                   @click="pen(info.projectIntroduction)">
                                 <!--介绍-->
@@ -238,7 +130,11 @@
                                 <span :class="info.projectSourceUrl? 'default el-icon-view' : 'red el-icon-view' ">源URL</span>
                             </a>
 
-
+                            <span class="el-icon-edit-outline"
+                                  @click="edit(info.id,info.projectName, info.projectPrice, info.projectMark, info.projectPort, info.projectStatus, info.addressProjectFront, info.addressProjectBackground, info.addressProjectBackgroundAccountPasswd)">
+                                <!--图片-->
+                            </span>
+                            <br>
                             <a :href="info.addressProjectFront" target="_blank">
                                 <span :class="info.addressProjectFront? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">Front</span>
                             </a>
@@ -258,142 +154,177 @@
                         <td style="text-align:center !important">
                             <span v-if="info.devDockerStatusImagesIsExist=='false'"
                                   class="el-icon-circle-plus-outline"
-                                  @click="buildToDocker(info.criteriaid)">
-                               <!--只要镜像不存在才能构建镜像构建-->
+                                  @click="buildToDocker(info.criteriaid)">dev
+                                <!--只要镜像不存在才能构建镜像构建-->
                             </span>
                             <span v-else class="el-icon-circle-close"
-                                  @click="runDockerShell(info.devDockerImageShellRemove)">
+                                  @click="runDockerShell(info.devDockerImageShellRemove)">dev
                                 <!--镜像移除-->
                             </span>
-                        </td>
-                        <td>
-                            <span v-if="info.devDockerStatusContainerIsExist=='false'"
-                                  class="el-icon-circle-plus-outline"
-                                  @click="runDockerShell(info.devDockerContainerShellCreate)">
-                            </span>
-                            <span v-else
-                                  class="el-icon-circle-close"
-                                  @click="runDockerShell(info.devDockerContainerShellRemove)">
-                                </span>
-                            <template v-if="info.devDockerStatusContainerIsExist=='true'">
-                            <span v-if="info.devDockerStatusContainerIsRunning=='false'"
-                                  class="el-icon-video-play"
-                                  @click="runDockerShell(info.devDockerContainerShellRun)">
-                                </span>
-                                <span v-else
-                                      class="el-icon-video-pause"
-                                      @click="runDockerShell(info.devDockerContainerShellStop)">
-                                </span>
-                            </template>
-                        </td>
-                        <td>
-                               <span v-if="info.devDockerStatusContainerIsRunning=='true'"
-                                     class="el-icon-circle-plus-outline"
-                                     @click="generateImageProZip(info.criteriaid)">devToPro
-                                   <!--devToPro-->
-                            </span>
-                        </td>
-                        <td style="text-align:center !important">
+                            <br>
                             <span v-if="info.proDockerStatusImagesIsExist=='false'"
                                   class="el-icon-circle-plus-outline"
-                                  @click="buildToDockerPro(info.criteriaid)">
-                               <!--只要镜像不存在才能构建镜像构建-->
+                                  @click="buildToDockerPro(info.criteriaid)">pro
+                                <!--只要镜像不存在才能构建镜像构建-->
                             </span>
                             <span v-else class="el-icon-circle-close"
-                                  @click="runDockerShell(info.proDockerImageShellRemove)">
+                                  @click="runDockerShell(info.proDockerImageShellRemove)">pro
                                 <!--镜像移除-->
                             </span>
                         </td>
                         <td>
-                            <span v-if="info.proDockerStatusContainerIsExist=='false'"
-                                  class="el-icon-circle-plus-outline"
-                                  @click="runDockerShell(info.proDockerContainerShellCreate)">
-                            </span>
-                            <span v-else
-                                  class="el-icon-circle-close"
-                                  @click="runDockerShell(info.proDockerContainerShellRemove)">
-                                </span>
-                            <template v-if="info.proDockerStatusContainerIsExist=='true'">
-                            <span v-if="info.proDockerStatusContainerIsRunning=='false'"
-                                  class="el-icon-video-play"
-                                  @click="runDockerShell(info.proDockerContainerShellRun)">
+                            <template v-if="info.devDockerStatusImagesIsExist=='true'">
+                                <span v-if="info.devDockerStatusContainerIsExist=='false'"
+                                      class="el-icon-circle-plus-outline"
+                                      @click="runDockerShell(info.devDockerContainerShellCreate)">dev
                                 </span>
                                 <span v-else
-                                      class="el-icon-video-pause"
-                                      @click="runDockerShell(info.proDockerContainerShellStop)">
+                                      class="el-icon-circle-close"
+                                      @click="runDockerShell(info.devDockerContainerShellRemove)">dev
                                 </span>
+                                <template v-if="info.devDockerStatusContainerIsExist=='true'">
+                                   <span v-if="info.devDockerStatusContainerIsRunning=='false'"
+                                         class="el-icon-video-play"
+                                         @click="runDockerShell(info.devDockerContainerShellRun)">dev
+                                    </span>
+                                    <span v-else
+                                          class="el-icon-video-pause"
+                                          @click="runDockerShell(info.devDockerContainerShellStop)">dev
+                                    </span>
+                                </template>
                             </template>
+                            <br>
+                            <template v-if="info.proDockerStatusImagesIsExist=='true'">
+                                <span v-if="info.proDockerStatusContainerIsExist=='false'"
+                                      class="el-icon-circle-plus-outline"
+                                      @click="runDockerShell(info.proDockerContainerShellCreate)">pro
+                                </span>
+                                <span v-else
+                                      class="el-icon-circle-close"
+                                      @click="runDockerShell(info.proDockerContainerShellRemove)">pro
+                                </span>
+                                <template v-if="info.proDockerStatusContainerIsExist=='true'">
+                                     <span v-if="info.proDockerStatusContainerIsRunning=='false'"
+                                           class="el-icon-video-play"
+                                           @click="runDockerShell(info.proDockerContainerShellRun)">pro
+                                    </span>
+                                    <span v-else
+                                          class="el-icon-video-pause"
+                                          @click="runDockerShell(info.proDockerContainerShellStop)">pro
+                                   </span>
+                                </template>
+                            </template>
+
                         </td>
                         <td>
-                            <a :href="info.addressContainerInner" target="_blank">
-                                <span :class="info.devDockerStatusContainerIsRunning=='true' || info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">容器内网</span>
-                            </a>
-                            <a :href="info.addressContainerOuter" target="_blank">
-                                <span :class="info.devDockerStatusContainerIsRunning=='true' || info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">容器外网</span>
-                            </a>
+                            <span class="el-icon-bottom"
+                                  @click="buildCreateAndRun(info.criteriaid,info.devDockerContainerShellCreate,info.devDockerContainerShellRun,'dev')">三合一(dev)
+                            </span>
+                            <span class="el-icon-bottom"
+                                  @click="runDockerShells(info.devDockerContainerShellStop,info.devDockerContainerShellRemove,info.devDockerImageShellRemove)">三合一移除(dev)
+                            </span>
+                            <br>
+                            <template v-if="info.devDockerStatusContainerIsRunning=='true'">
+                                <span v-if=""
+                                      class="el-icon-bottom"
+                                      @click="generateImageProZip(info.criteriaid)">devToPro
+                                    <!--devToPro-->
+                                </span>
+                                <br>
+                            </template>
+                            <span class="el-icon-bottom"
+                                  @click="buildCreateAndRun(info.criteriaid,info.proDockerContainerShellCreate,info.proDockerContainerShellRun,'pro')">三合一(pro)
+                            </span>
+                            <span class="el-icon-bottom"
+                                  @click="runDockerShells(info.proDockerContainerShellStop,info.proDockerContainerShellRemove,info.proDockerImageShellRemove)">三合一移除(pro)
+                            </span>
+
+
+                        </td>
+
+                        <td>
+                            <template v-if="info.devDockerContainerId">
+                                <a :href="info.addressContainerInner" target="_blank">
+                                    <span :class="info.devDockerStatusContainerIsRunning=='true' ? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">dev容器内网</span>
+                                </a>
+                                <a :href="info.addressContainerOuter" target="_blank">
+                                    <span :class="info.devDockerStatusContainerIsRunning=='true' ? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">dev容器外网</span>
+                                </a>
+                            </template>
+                            <template v-if="info.proDockerContainerId">
+                                <br>
+                                <a :href="info.addressContainerInner" target="_blank">
+                                    <span :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">pro容器内网</span>
+                                </a>
+                                <a :href="info.addressContainerOuter" target="_blank">
+                                    <span :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-video-camera-solid' : 'red el-icon-video-camera-solid' ">pro容器外网</span>
+                                </a>
+                            </template>
                         </td>
                         <td>
                             <template v-if="info.devDockerContainerId">
                                 <span @click="openInnerPortainerUrl(info.devDockerContainerId,'logs')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' ">dev</span>
                                 <span @click="openInnerPortainerUrl(info.devDockerContainerId,'inspect')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' ">dev</span>
                                 <span @click="openInnerPortainerUrl(info.devDockerContainerId,'stats')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' ">dev</span>
                                 <span @click="openInnerPortainerUrl(info.devDockerContainerId,'exec')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' ">dev</span>
                             </template>
+                            <br>
                             <template v-if="info.proDockerContainerId">
                                 <span @click="openInnerPortainerUrl(info.proDockerContainerId,'logs')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' ">pro</span>
                                 <span @click="openInnerPortainerUrl(info.proDockerContainerId,'inspect')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' ">pro</span>
                                 <span @click="openInnerPortainerUrl(info.proDockerContainerId,'stats')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' ">pro</span>
                                 <span @click="openInnerPortainerUrl(info.proDockerContainerId,'exec')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' ">pro</span>
                             </template>
                         </td>
                         <td>
                             <template v-if="info.devDockerContainerId">
                                 <span @click="openOuterPortainerUrl(info.devDockerContainerId,'logs')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' ">dev</span>
                                 <span @click="openOuterPortainerUrl(info.devDockerContainerId,'inspect')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' ">dev</span>
                                 <span @click="openOuterPortainerUrl(info.devDockerContainerId,'stats')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' ">dev</span>
                                 <span @click="openOuterPortainerUrl(info.devDockerContainerId,'exec')"
-                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                                      :class="info.devDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' ">dev</span>
                             </template>
+                            <br>
                             <template v-if="info.proDockerContainerId">
                                 <span @click="openOuterPortainerUrl(info.proDockerContainerId,'logs')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-document' : 'red el-icon-document' ">pro</span>
                                 <span @click="openOuterPortainerUrl(info.proDockerContainerId,'inspect')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-info' : 'red el-icon-info' ">pro</span>
                                 <span @click="openOuterPortainerUrl(info.proDockerContainerId,'stats')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-s-data' : 'red el-icon-s-data' ">pro</span>
                                 <span @click="openOuterPortainerUrl(info.proDockerContainerId,'exec')"
-                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' "></span>
+                                      :class="info.proDockerStatusContainerIsRunning=='true'? 'default el-icon-arrow-right' : 'red el-icon-arrow-right' ">pro</span>
                             </template>
                         </td>
-                        <td>{{info.projectUpdateTime}}</td>
-                        <td>{{info.projectType}}</td>
+                        <!--<td>{{info.projectUpdateTime}}</td>-->
+                        <!--<td>{{info.projectType}}</td>-->
                         <td>{{info.projectPrice}}</td>
-                        <td>{{info.projectPackageType}}</td>
-                        <td>{{info.projectRealFileName}}</td>
-                        <td>{{info.projectLanguage}}</td>
+                        <!--<td>{{info.projectPackageType}}</td>-->
+                        <!--<td>{{info.projectRealFileName}}</td>-->
+                        <!--<td>{{info.projectLanguage}}</td>-->
                         <td>{{info.projectSize2}}</td>
-                        <td>{{info.projectSizeNum}}</td>
-                        <td>{{info.projectSizeType}}</td>
-                        <td>{{info.projectRuntime}}</td>
-                        <td>{{info.projectDownloadSum}}</td>
+                        <!--<td>{{info.projectSizeNum}}</td>-->
+                        <!--<td>{{info.projectSizeType}}</td>-->
+                        <!--<td>{{info.projectRuntime}}</td>-->
+                        <!--<td>{{info.projectDownloadSum}}</td>-->
                         <td>{{info.projectStatus}}</td>
                         <td>{{info.projectMark}}</td>
-                        <td>{{info.projectCanRunning}}</td>
-                        <td>{{info.dockerImageName}}</td>
-                        <td>{{info.dockerStatus}}</td>
-                        <td>{{info.dockerContainerName}}</td>
-                        <td>{{info.dockerContainerPort}}</td>
+                        <!--<td>{{info.projectCanRunning}}</td>-->
+                        <!--<td>{{info.dockerImageName}}</td>-->
+                        <!--<td>{{info.dockerStatus}}</td>-->
+                        <!--<td>{{info.dockerContainerName}}</td>-->
+                        <!--<td>{{info.dockerContainerPort}}</td>-->
                         <td>{{info.addressProjectBackgroundAccountPasswd}}</td>
                         <td>{{info.updateTime}}</td>
                     </tr>
@@ -415,33 +346,63 @@
                                :total="pageInfo.total">
                 </el-pagination>
             </div>
-            <el-dialog
-                    title="更新"
-                    :visible.sync="dialog.dialogVisible"
-                    width="40%">
-                <el-input
-                        type="textarea"
-                        :rows="20"
-                        placeholder="请输入json"
-                        v-model="dialog.value">
-                </el-input>
-                <span slot="footer" class="dialog-footer">
-    <el-button @click="dialog.dialogVisible = false">取 消</el-button>
-    <el-button type="primary" @click="handleClose">确 定</el-button></span>
-            </el-dialog>
             <!--下载地址-->
             <el-dialog
                     title=""
                     :visible.sync="imgs.dialog.dialogVisible"
                     fullscreen="true"
                     show-close="false"
-                    style="text-align: center"
-                    :before-close="handleClose">
+                    style="text-align: center">
                 <template v-for="url in imgs.dialog.urls">
                     <img :src="imgs.api+'?fileName='+url" width="30%" style="float: left; margin: 5px"/>
                 </template>
+                <!--<span slot="footer" class="dialog-footer">-->
+                <!--<el-button type="primary" @click="imgs.dialog.dialogVisible = false">确 定</el-button>-->
+                <!--</span>-->
+            </el-dialog>
+            <el-dialog
+                    title="更新"
+                    :visible.sync="dialog_edit.dialogVisible"
+                    show-close=false
+                    style="text-align: center">
+                <el-form label-width="300px">
+                    <el-form-item label="id">
+                        <el-input v-model="dialog_edit.id" placeholder="请输入" disabled></el-input>
+                    </el-form-item>
+                    <el-form-item label="projectName(名称)">
+                        <el-input v-model="dialog_edit.projectName" placeholder="请输入"></el-input>
+                    </el-form-item>
+                    <el-form-item label="projectPrice(价格)">
+                        <el-input v-model="dialog_edit.projectPrice" placeholder="请输入"></el-input>
+                    </el-form-item>
+                    <el-form-item label="projectMark(备注)">
+                        <el-input v-model="dialog_edit.projectMark"
+                                  type="textarea" placeholder="请输入"></el-input>
+                    </el-form-item>
+                    <el-form-item label="projectPort(端口号)">
+                        <el-input v-model="dialog_edit.projectPort" placeholder="请输入" disabled></el-input>
+                    </el-form-item>
+                    <el-form-item label="projectStatus(状态)">
+                        <el-select v-model="dialog_edit.projectStatus" placeholder="请输入">
+                            <el-option v-for="item in status" :key="item"
+                                       :value="item">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="addressProjectFront(前端地址)">
+                        <el-input v-model="dialog_edit.addressProjectFront" placeholder="请输入"></el-input>
+                    </el-form-item>
+                    <el-form-item label="addressProjectBackground(后台地址)">
+                        <el-input v-model="dialog_edit.addressProjectBackground" placeholder="请输入"></el-input>
+                    </el-form-item>
+                    <el-form-item label="AccountPasswd(账号密码)">
+                        <el-input v-model="dialog_edit.addressProjectBackgroundAccountPasswd"
+                                  type="textarea" placeholder="请输入"></el-input>
+                    </el-form-item>
+                </el-form>
                 <span slot="footer" class="dialog-footer">
-    <el-button type="primary" @click="imgs.dialog.dialogVisible = false">确 定</el-button></span>
+                <el-button @click="dialog_edit.dialogVisible = false">取 消</el-button>
+                <el-button type="primary" @click="handleClose">确 定</el-button></span>
             </el-dialog>
         </div>
     </div>
@@ -559,6 +520,18 @@
                     dialogVisible: false,
                     value: ''
                 },
+                dialog_edit: {
+                    dialogVisible: false,
+                    id: '',
+                    projectName: '',
+                    projectPrice: '',
+                    projectMark: '',
+                    projectPort: '',
+                    projectStatus: '',
+                    addressProjectFront: '',
+                    addressProjectBackground: '',
+                    addressProjectBackgroundAccountPasswd: ''
+                },
                 imgs: {
                     dialog: {
                         dialogVisible: false,
@@ -571,7 +544,8 @@
                         inner: "",
                         outer: ""
                     }
-                }
+                },
+                status: ["created", "未开始", "可用", "废弃", "暂定"]
 
             }
 
@@ -589,6 +563,8 @@
             queryBase() {
                 let self = this;
                 var params = new FormData();
+
+
                 if (self.search.id != null && self.search.id != '') {
                     params.append("id", self.search.id);
                 }
@@ -598,122 +574,14 @@
                 if (self.search.projectName != null && self.search.projectName != '') {
                     params.append("projectName", self.search.projectName);
                 }
-                if (self.search.projectUpdateTime != null && self.search.projectUpdateTime != '') {
-                    params.append("projectUpdateTime", self.search.projectUpdateTime);
-                }
-                if (self.search.projectType != null && self.search.projectType != '') {
-                    params.append("projectType", self.search.projectType);
-                }
-                if (self.search.projectPrice != null && self.search.projectPrice != '') {
-                    params.append("projectPrice", self.search.projectPrice);
-                }
-                if (self.search.projectPackageType != null && self.search.projectPackageType != '') {
-                    params.append("projectPackageType", self.search.projectPackageType);
-                }
-                if (self.search.projectPanAddress != null && self.search.projectPanAddress != '') {
-                    params.append("projectPanAddress", self.search.projectPanAddress);
-                }
-                if (self.search.projectRealFileName != null && self.search.projectRealFileName != '') {
-                    params.append("projectRealFileName", self.search.projectRealFileName);
-                }
-                if (self.search.projectHtmlBody != null && self.search.projectHtmlBody != '') {
-                    params.append("projectHtmlBody", self.search.projectHtmlBody);
-                }
-                if (self.search.projectSourceUrl != null && self.search.projectSourceUrl != '') {
-                    params.append("projectSourceUrl", self.search.projectSourceUrl);
-                }
-                if (self.search.projectLanguage != null && self.search.projectLanguage != '') {
-                    params.append("projectLanguage", self.search.projectLanguage);
+                if (self.search.projectSize2 != null && self.search.projectSize2 != '') {
+                    params.append("projectSize2", self.search.projectSize2);
                 }
                 if (self.search.projectSize2 != null && self.search.projectSize2 != '') {
                     params.append("projectSize2", self.search.projectSize2);
                 }
-                if (self.search.projectSizeNum != null && self.search.projectSizeNum != '') {
-                    params.append("projectSizeNum", self.search.projectSizeNum);
-                }
-                if (self.search.projectSizeType != null && self.search.projectSizeType != '') {
-                    params.append("projectSizeType", self.search.projectSizeType);
-                }
-                if (self.search.projectImgs != null && self.search.projectImgs != '') {
-                    params.append("projectImgs", self.search.projectImgs);
-                }
-                if (self.search.projectImgsDefault != null && self.search.projectImgsDefault != '') {
-                    params.append("projectImgsDefault", self.search.projectImgsDefault);
-                }
-                if (self.search.projectRuntime != null && self.search.projectRuntime != '') {
-                    params.append("projectRuntime", self.search.projectRuntime);
-                }
-                if (self.search.projectOfficialWebsite != null && self.search.projectOfficialWebsite != '') {
-                    params.append("projectOfficialWebsite", self.search.projectOfficialWebsite);
-                }
-                if (self.search.projectShowWebsite != null && self.search.projectShowWebsite != '') {
-                    params.append("projectShowWebsite", self.search.projectShowWebsite);
-                }
-                if (self.search.projectDownloadUrls != null && self.search.projectDownloadUrls != '') {
-                    params.append("projectDownloadUrls", self.search.projectDownloadUrls);
-                }
-                if (self.search.projectDownloadSum != null && self.search.projectDownloadSum != '') {
-                    params.append("projectDownloadSum", self.search.projectDownloadSum);
-                }
-                if (self.search.projectIntroduction != null && self.search.projectIntroduction != '') {
-                    params.append("projectIntroduction", self.search.projectIntroduction);
-                }
                 if (self.search.projectStatus != null && self.search.projectStatus != '') {
                     params.append("projectStatus", self.search.projectStatus);
-                }
-                if (self.search.projectMark != null && self.search.projectMark != '') {
-                    params.append("projectMark", self.search.projectMark);
-                }
-                if (self.search.projectCanRunning != null && self.search.projectCanRunning != '') {
-                    params.append("projectCanRunning", self.search.projectCanRunning);
-                }
-                if (self.search.dockerImageName != null && self.search.dockerImageName != '') {
-                    params.append("dockerImageName", self.search.dockerImageName);
-                }
-                if (self.search.dockerImageShellRemove != null && self.search.dockerImageShellRemove != '') {
-                    params.append("dockerImageShellRemove", self.search.dockerImageShellRemove);
-                }
-                if (self.search.dockerStatus != null && self.search.dockerStatus != '') {
-                    params.append("dockerStatus", self.search.dockerStatus);
-                }
-                if (self.search.dockerContainerId != null && self.search.dockerContainerId != '') {
-                    params.append("dockerContainerId", self.search.dockerContainerId);
-                }
-                if (self.search.dockerContainerName != null && self.search.dockerContainerName != '') {
-                    params.append("dockerContainerName", self.search.dockerContainerName);
-                }
-                if (self.search.dockerContainerPort != null && self.search.dockerContainerPort != '') {
-                    params.append("dockerContainerPort", self.search.dockerContainerPort);
-                }
-                if (self.search.dockerContainerShellCreate != null && self.search.dockerContainerShellCreate != '') {
-                    params.append("dockerContainerShellCreate", self.search.dockerContainerShellCreate);
-                }
-                if (self.search.dockerContainerShellRun != null && self.search.dockerContainerShellRun != '') {
-                    params.append("dockerContainerShellRun", self.search.dockerContainerShellRun);
-                }
-                if (self.search.dockerContainerShellStop != null && self.search.dockerContainerShellStop != '') {
-                    params.append("dockerContainerShellStop", self.search.dockerContainerShellStop);
-                }
-                if (self.search.dockerContainerShellRemove != null && self.search.dockerContainerShellRemove != '') {
-                    params.append("dockerContainerShellRemove", self.search.dockerContainerShellRemove);
-                }
-                if (self.search.addressContainerOuter != null && self.search.addressContainerOuter != '') {
-                    params.append("addressContainerOuter", self.search.addressContainerOuter);
-                }
-                if (self.search.addressContainerInner != null && self.search.addressContainerInner != '') {
-                    params.append("addressContainerInner", self.search.addressContainerInner);
-                }
-                if (self.search.addressProjectFront != null && self.search.addressProjectFront != '') {
-                    params.append("addressProjectFront", self.search.addressProjectFront);
-                }
-                if (self.search.addressProjectBackground != null && self.search.addressProjectBackground != '') {
-                    params.append("addressProjectBackground", self.search.addressProjectBackground);
-                }
-                if (self.search.addressProjectBackgroundAccountPasswd != null && self.search.addressProjectBackgroundAccountPasswd != '') {
-                    params.append("addressProjectBackgroundAccountPasswd", self.search.addressProjectBackgroundAccountPasswd);
-                }
-                if (self.search.updateTime != null && self.search.updateTime != '') {
-                    params.append("updateTime", self.search.updateTime);
                 }
                 var paramsJson = {};
                 params.forEach((value, key) => paramsJson[key] = value);
@@ -1111,6 +979,117 @@
                 })
             }
             ,
+            runDockerShells(shell1, shell2, shell3) {
+                let self = this;
+                this.$confirm('是否执行该条命令？', shell1 + shell2 + shell3, {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    center: true
+                }).then(() => {
+                    self.$http.get(self.api.runDockerShells + "?shell=" + shell1 + "&shell=" + shell2 + "&shell=" + shell3
+                        , {},
+                        function (response) {
+                            if (response.code == 0) {
+                                self.$message({
+                                    type: 'success',
+                                    message: '执行成功:' + response.content,
+                                    duration: 2000
+                                });
+                                self.queryBase();
+                            } else {
+                                self.$message({
+                                    type: 'error',
+                                    message: response.msg,
+                                    duration: 2000
+                                });
+                            }
+                        },
+                        function (response) {
+                            console.log(response);
+                            //失败回调
+                            self.$message({
+                                type: 'error',
+                                message: "请求异常",
+                                duration: 2000
+                            });
+                        }
+                    )
+
+                })
+            }
+            ,
+            buildCreateAndRun(criteriaid, shell1, shell2, type) {
+                let self = this;
+                this.$confirm('是否执行三合一条命令？', type + criteriaid + shell1 + shell2, {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    center: true
+                }).then(() => {
+                    let url = '';
+                    if ('dev' == type) {
+                        url = self.api.buildToDocker;
+                    }
+                    if ('pro' == type) {
+                        url = self.api.buildToDockerPro;
+                    }
+                    self.$http.get(url
+                        , {
+                            params: {
+                                criteriaid: criteriaid
+                            }
+                        },
+                        function (response) {
+                            if (response.code == 0) {
+                                self.$http.get(self.api.runDockerShells + "?shell=" + shell1 + "&shell=" + shell2
+                                    , {},
+                                    function (response) {
+                                        if (response.code == 0) {
+                                            self.$message({
+                                                type: 'success',
+                                                message: '执行成功:' + response.content,
+                                                duration: 2000
+                                            });
+                                            self.queryBase();
+                                        } else {
+                                            self.$message({
+                                                type: 'error',
+                                                message: response.msg,
+                                                duration: 2000
+                                            });
+                                        }
+                                    },
+                                    function (response) {
+                                        console.log(response);
+                                        //失败回调
+                                        self.$message({
+                                            type: 'error',
+                                            message: "请求异常",
+                                            duration: 2000
+                                        });
+                                    }
+                                )
+
+                            } else {
+                                self.$message({
+                                    type: 'error',
+                                    message: response.msg,
+                                    duration: 2000
+                                });
+                            }
+                        },
+                        function (response) {
+                            console.log(response);
+                            //失败回调
+                            self.$message({
+                                type: 'error',
+                                message: "请求异常",
+                                duration: 2000
+                            });
+                        }
+                    )
+                })
+            }
+            ,
             downloadZip(criteriaid) {
                 this.$confirm('是否下载zip？', criteriaid, {
                     confirmButtonText: '确定',
@@ -1135,9 +1114,113 @@
                 })
             }
             ,
+            edit(id, projectName, projectPrice, projectMark, projectPort, projectStatus, addressProjectFront, addressProjectBackground, addressProjectBackgroundAccountPasswd) {
+                let self = this;
+                //清空
+                self.dialog_edit.id = '';
+                self.dialog_edit.projectName = '';
+                self.dialog_edit.projectPrice = '';
+                self.dialog_edit.projectMark = '';
+                self.dialog_edit.projectPort = '';
+                self.dialog_edit.projectStatus = '';
+                self.dialog_edit.addressProjectFront = '';
+                self.dialog_edit.addressProjectBackground = '';
+                self.dialog_edit.addressProjectBackgroundAccountPasswd = '';
 
+                //
+                self.dialog_edit.dialogVisible = true;
+                self.dialog_edit.id = id;
+                self.dialog_edit.projectName = projectName;
+                self.dialog_edit.projectPrice = projectPrice;
+                self.dialog_edit.projectMark = projectMark;
+                self.dialog_edit.projectPort = projectPort;
+                self.dialog_edit.projectStatus = projectStatus;
+                self.dialog_edit.addressProjectFront = addressProjectFront;
+                self.dialog_edit.addressProjectBackground = addressProjectBackground;
+                self.dialog_edit.addressProjectBackgroundAccountPasswd = addressProjectBackgroundAccountPasswd;
+
+            },
+            handleClose() {
+                let self = this;
+                //更新
+                this.$confirm('确认更新?')
+                    .then(_ => {
+                        // self.Index_DocumentController_Update(self.dialog.index, self.dialog.type, self.dialog.id, self.dialog.value);
+                        self.updateByKey(self.dialog_edit.id, self.dialog_edit.projectName, self.dialog_edit.projectPrice, self.dialog_edit.projectMark, self.dialog_edit.projectPort, self.dialog_edit.projectStatus, self.dialog_edit.addressProjectFront, self.dialog_edit.addressProjectBackground, self.dialog_edit.addressProjectBackgroundAccountPasswd);
+                        self.dialog_edit.dialogVisible = false
+                    })
+                    .catch(_ => {
+                        self.dialog_edit.dialogVisible = false
+                    });
+            },
+            updateByKey(id, projectName, projectPrice, projectMark, projectPort, projectStatus, addressProjectFront, addressProjectBackground, addressProjectBackgroundAccountPasswd) {
+
+                // debugger
+                let self = this;
+                var sourceParams = new FormData();
+                var sourceParamsResult = new FormData();
+                var targetParams = new FormData();
+
+                sourceParams.append('id', id);
+                sourceParams.append('projectPrice', projectPrice);
+                sourceParams.append('projectMark', projectMark);
+                sourceParams.append('projectPort', projectPort);
+                sourceParams.append('projectStatus', projectStatus);
+                sourceParams.append('addressProjectFront', addressProjectFront);
+                sourceParams.append('addressProjectBackground', addressProjectBackground);
+                sourceParams.append('addressProjectBackgroundAccountPasswd', addressProjectBackgroundAccountPasswd);
+
+                targetParams.append('id', id);
+
+                for (var key of sourceParams.keys()) {
+                    if (sourceParams.get(key) != "undefined") {
+                        sourceParamsResult.append(key, sourceParams.get(key))
+                    }
+                }
+                /**
+                 * 转json
+                 */
+                var sourceParamsJson = {};
+                sourceParamsResult.forEach((value, key) => sourceParamsJson[key] = value);
+                var targetParamsJson = {};
+                targetParams.forEach((value, key) => targetParamsJson[key] = value);
+
+                self.$http.post(self.api.updateProjectPlusByPrimaryKey, {
+                    "source": sourceParamsJson,
+                    "target": targetParamsJson
+                }, {
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                }, function (response) {
+                    if (response.code == 0) {
+                        if (response.content == true) {
+                            self.$message({
+                                type: 'success',
+                                message: '执行成功:' + response.content,
+                                duration: 2000
+                            });
+                            self.queryBase();
+
+                        } else {
+                            self.$message({
+                                type: 'warning',
+                                message: '修改失败',
+                                duration: 2000
+                            });
+                        }
+                    } else {
+                        self.$message({
+                            type: 'error',
+                            message: response.msg,
+                            duration: 2000
+                        });
+                    }
+                }, function (response) {
+                    //失败回调
+                })
+            }
         }
-
     }
 </script>
 
